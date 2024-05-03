@@ -11,7 +11,7 @@ module "vpc" {
 
 module "asg" {
   source         = "../../modules/autoscaling"
-  public_subnets = [module.vpc.private_subnets_ids["10.0.3.0/24"], module.vpc.private_subnets_ids["10.0.4.0/24"]]
+  public_subnets = [module.vpc.public_subnets_ids["10.0.2.0/24"], module.vpc.private_subnets_ids["10.0.4.0/24"]]
   sg             = [aws_security_group.sg.id]
   vpc_id         = module.vpc.vpc_id
   target_group_arn = module.alb.default_target_group_arn
@@ -42,7 +42,7 @@ resource "aws_security_group" "sg" {
 module "alb" {
   source             = "cloudposse/alb/aws"
   namespace = "alb"
-  subnet_ids = [module.vpc.private_subnets_ids["10.0.3.0/24"], module.vpc.private_subnets_ids["10.0.4.0/24"]]
+  subnet_ids = [module.vpc.public_subnets_ids["10.0.2.0/24"], module.vpc.public_subnets_ids["10.0.1.0/24"]]
   vpc_id     = module.vpc.vpc_id
 
 }

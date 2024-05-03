@@ -1,0 +1,521 @@
+{
+  "version": 4,
+  "terraform_version": "1.7.5",
+  "serial": 162,
+  "lineage": "a48d3f1f-539b-0449-3d84-cc6c8e05d4d6",
+  "outputs": {},
+  "resources": [
+    {
+      "module": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket",
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "acceleration_status": "",
+            "acl": null,
+            "arn": "arn:aws:s3:::alb-alb-access-logs",
+            "bucket": "alb-alb-access-logs",
+            "bucket_domain_name": "alb-alb-access-logs.s3.amazonaws.com",
+            "bucket_prefix": "",
+            "bucket_regional_domain_name": "alb-alb-access-logs.s3.us-east-1.amazonaws.com",
+            "cors_rule": [],
+            "force_destroy": false,
+            "grant": [
+              {
+                "id": "",
+                "permissions": [
+                  "READ_ACP",
+                  "WRITE"
+                ],
+                "type": "Group",
+                "uri": "http://acs.amazonaws.com/groups/s3/LogDelivery"
+              },
+              {
+                "id": "25969ab9335ddee307b2f9c7e210a7b55415170bfbd8f500823d526224fbc633",
+                "permissions": [
+                  "FULL_CONTROL"
+                ],
+                "type": "CanonicalUser",
+                "uri": ""
+              }
+            ],
+            "hosted_zone_id": "Z3AQBSTGFYJSTF",
+            "id": "alb-alb-access-logs",
+            "lifecycle_rule": [],
+            "logging": [],
+            "object_lock_configuration": [],
+            "object_lock_enabled": false,
+            "policy": "{\"Statement\":[{\"Action\":\"s3:PutObject\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::127311923021:root\"},\"Resource\":\"arn:aws:s3:::alb-alb-access-logs/*\"},{\"Action\":\"s3:PutObject\",\"Condition\":{\"StringEquals\":{\"s3:x-amz-acl\":\"bucket-owner-full-control\"}},\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"delivery.logs.amazonaws.com\"},\"Resource\":\"arn:aws:s3:::alb-alb-access-logs/*\"},{\"Action\":\"s3:GetBucketAcl\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"delivery.logs.amazonaws.com\"},\"Resource\":\"arn:aws:s3:::alb-alb-access-logs\"}],\"Version\":\"2012-10-17\"}",
+            "region": "us-east-1",
+            "replication_configuration": [],
+            "request_payer": "BucketOwner",
+            "server_side_encryption_configuration": [
+              {
+                "rule": [
+                  {
+                    "apply_server_side_encryption_by_default": [
+                      {
+                        "kms_master_key_id": "",
+                        "sse_algorithm": "AES256"
+                      }
+                    ],
+                    "bucket_key_enabled": false
+                  }
+                ]
+              }
+            ],
+            "tags": {
+              "Attributes": "alb-access-logs",
+              "Name": "alb-alb-access-logs",
+              "Namespace": "alb"
+            },
+            "tags_all": {
+              "Attributes": "alb-access-logs",
+              "Name": "alb-alb-access-logs",
+              "Namespace": "alb"
+            },
+            "timeouts": null,
+            "versioning": [
+              {
+                "enabled": true,
+                "mfa_delete": false
+              }
+            ],
+            "website": [],
+            "website_domain": null,
+            "website_endpoint": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjM2MDAwMDAwMDAwMDAsInJlYWQiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19"
+        }
+      ]
+    }
+  ],
+  "check_results": [
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.this.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.module.store_write.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.default_load_balancer_label.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.default_target_group_label.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.this.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.default_target_group_label.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.this.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.this.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.bucket_name.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.module.store_write.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.this.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.this.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.this.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.module.store_write.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.bucket_name.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.module.store_write.module.this.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.module.this.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.this.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.this.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.var.website_configuration",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.this.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.default_load_balancer_label.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.default_load_balancer_label.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.default_target_group_label.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.module.store_write.module.this.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.this.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.module.store_write.module.this.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.this.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.this.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.module.this.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.this.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.this.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.bucket_name.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.module.this.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.this.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.this.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.var.website_redirect_all_requests_to",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.default_load_balancer_label.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.bucket_name.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.module.this.var.id_length_limit",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.this.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.module.store_write.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.this.var.context",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.default_target_group_label.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.this.var.label_value_case",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.alb.module.access_logs.module.s3_bucket.module.aws_s3_bucket.module.s3_user.module.s3_user.module.store_write.module.this.var.label_key_case",
+      "status": "unknown",
+      "objects": null
+    }
+  ]
+}
